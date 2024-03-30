@@ -7,7 +7,7 @@ class UnknownCommand extends Command {
         $chatId = $message['message']['chat']['id'];
         $command = explode(' ', $message['message']['text']);
 
-        $this->bot->sendMessage($chatId, "i don't know "$command[0]" command :(");
+        $this->bot->sendMessage($chatId, "i don't know \"$command[0]\" command :(");
     }
 
    public function getName() {
